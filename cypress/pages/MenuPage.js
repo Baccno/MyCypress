@@ -1,22 +1,22 @@
 class MenuPage {
   visit() {
-    cy.visit('file:///C:/Users/henri/CodexTravel-cypress/index.html');
+    cy.visit('http://localhost:8080/index.html'); // Use a URL do servidor local
   }
 
   navigateToCalculator() {
-    cy.get('a[href="#calculadora"]').click(); // Ajuste o seletor conforme necessário
+    cy.get('a[href="#calculadora"]').click(); 
   }
 
   navigateToDestinos() {
-    cy.get('a[href="#destinos"]').click(); // Ajuste o seletor conforme necessário
+    cy.get('a[href="#destinos"]').click(); 
   }
 
-  getSuccessMessage() {
-    return cy.get('.success-message'); // Ajuste o seletor conforme necessário
+  getTitleCalculo() {
+    return cy.get('#calculadora > h2'); 
   }
 
-  getErrorMessage() {
-    return cy.get('.error-message'); // Ajuste o seletor conforme necessário
+  getTitleDestinos() {
+    return cy.get('#destinos > h2'); 
   }
 }
 
